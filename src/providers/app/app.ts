@@ -18,16 +18,33 @@ export class AppProvider {
 
   public appList$: Subject<IApp[]> = new Subject<IApp[]>();
   public favAppList$: Subject<IApp[]> = new Subject<IApp[]>();
+  public oftenAppList$: Subject<IApp[]> = new Subject<IApp[]>();
 
   private appList: IApp[] = [];
   private favAppList: IApp[] = [];
+  private oftenAppList: IApp[] = [];
 
   public loadAllApp(): void {
     if (this.appList.length <= 0) {
-      this.appList.push(new IApp("一号APP", "../../assets/icon/i1.png"));
-      this.appList.push(new IApp("二号APP", "../../assets/icon/i2.png"));
-      this.appList.push(new IApp("三号APP", "../../assets/icon/i3.png"));
-      this.appList.push(new IApp("四号APP", "../../assets/icon/i2.png"));
+      let app = new IApp()
+      app.appName = "一号APP";
+      app.appIconUrl = "../../assets/icon/i1.png";
+      this.appList.push(app);
+
+      app = new IApp()
+      app.appName = "二号APP";
+      app.appIconUrl = "../../assets/icon/i2.png";
+      this.appList.push(app);
+
+      app = new IApp()
+      app.appName = "三号APP";
+      app.appIconUrl = "../../assets/icon/i3.png";
+      this.appList.push(app);
+
+      app = new IApp()
+      app.appName = "四号APP";
+      app.appIconUrl = "../../assets/icon/i2.png";
+      this.appList.push(app);
     }
     this.appList$.next(this.appList);
   }
@@ -39,5 +56,13 @@ export class AppProvider {
       this.favAppList.push(this.appList[2]);
     }
     this.favAppList$.next(this.favAppList);;
+  }
+  
+  public loadOftenApp(): void {
+    this.loadAllApp();
+    if (this.favAppList.length <= 0) {
+      this.oftenAppList.push(this.appList[0]);
+    }
+    this.oftenAppList$.next(this.oftenAppList);;
   }
 }

@@ -1,5 +1,7 @@
 {
   "name": "app-box",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

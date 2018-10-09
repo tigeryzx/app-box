@@ -20,4 +20,8 @@ export class IappComponent {
 
   }
 
+  openApp(): void {
+    console.log(`打开应用:${this.app.appName}`);
+  }
+
 }

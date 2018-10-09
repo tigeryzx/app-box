@@ -1,0 +1,16 @@
+<!-- Generated template for the LoginComponent component -->
+<div class="loginContent">
+  <div class="loginHeader">
+    登录有惊喜哦！
+  </div>
+  <ion-item>
+    <ion-label floating>用户名</ion-label>
+    <ion-input type="text" [(ngModel)]="loginInfo.loginName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>密码</ion-label>
+    <ion-input type="password" [(ngModel)]="loginInfo.password"></ion-input>
+  </ion-item>
+  <button ion-button full (click)="login()">登录</button>
+</div>

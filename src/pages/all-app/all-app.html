@@ -20,6 +20,6 @@
 
 <ion-content padding>
   <div class="app-content" *ngIf="appList">
-    <iapp *ngFor="let app of appList" [app]="app"></iapp>
+    <iapp (press)="openMenu(app)" *ngFor="let app of appList" [app]="app"></iapp>
   </div>
 </ion-content>

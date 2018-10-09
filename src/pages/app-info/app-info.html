@@ -20,17 +20,42 @@
 
 
 <ion-content padding>
-  <ion-item>
-    <ion-label floating>应用名称</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>访问地址</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>图标路径</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+
+  <ion-list>
+    <ion-list-header>
+      基本信息
+    </ion-list-header>
+    <ion-item>
+      <ion-label floating>应用名称</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>访问地址</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>图标路径</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-list-header>
+      图标
+    </ion-list-header>
+    <ion-list radio-group>
+        <ion-item>
+          <ion-label>默认</ion-label>
+          <ion-radio value="default" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>上传</ion-label>
+          <ion-radio value="upload"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>选择已有</ion-label>
+          <ion-radio value="select"></ion-radio>
+        </ion-item>
+      </ion-list>
+  </ion-list>
+
+
   <button ion-button full (click)="save()">保存</button>
 </ion-content>

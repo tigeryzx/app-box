@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { NavController, NavParams, ModalController } from 'ionic-angular';
+import { NavController, NavParams, ModalController, ActionSheetController } from 'ionic-angular';
 import { IApp } from '../../domain/entity';
 import { AppProvider } from '../../providers/app/app';
 import { AppInfoPage } from '../app-info/app-info';
@@ -26,7 +26,8 @@ export class AllAppPage implements OnDestroy {
     public navCtrl: NavController,
     public navParams: NavParams,
     private appProvider: AppProvider,
-    private modalCtrl: ModalController) {
+    private modalCtrl: ModalController,
+    private actionSheetCtrl: ActionSheetController) {
   }
 
   ionViewDidLoad() {
@@ -46,5 +47,29 @@ export class AllAppPage implements OnDestroy {
     console.log('addApp');
     const modal = this.modalCtrl.create(AppInfoPage);
     modal.present();
+  }
+
+  openMenu(app: IApp): void {
+    this.actionSheetCtrl.create({
+      buttons: [{
+        text: '收藏',
+        handler: () => {
+          console.log(`收藏${app.appName}`);
+        }
+      },{
+        text: '编辑',
+        handler: () => {
+          const modal = this.modalCtrl.create(AppInfoPage);
+          modal.present();
+          console.log(`编辑${app.appName}`);
+        }
+      },{
+        text: '删除',
+        role: 'destructive',
+        handler: () => {
+          console.log(`删除${app.appName}`);
+        }
+      }]
+    }).present();
   }
 }

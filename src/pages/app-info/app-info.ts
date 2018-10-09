@@ -14,7 +14,9 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class AppInfoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams) {
   }
 
   ionViewDidLoad() {

@@ -13,6 +13,7 @@ import { AppProvider } from '../providers/app/app';
 import { HttpClientModule } from '@angular/common/http';
 import { AllAppPage } from '../pages/all-app/all-app';
 import { AppInfoPage } from '../pages/app-info/app-info';
+import { OftenAppPage } from '../pages/often-app/often-app';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppInfoPage } from '../pages/app-info/app-info';
     TabsPage,
     MyAppPage,
     AllAppPage,
-    AppInfoPage
+    AppInfoPage,
+    OftenAppPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { AppInfoPage } from '../pages/app-info/app-info';
     TabsPage,
     MyAppPage,
     AllAppPage,
-    AppInfoPage
+    AppInfoPage,
+    OftenAppPage
   ],
   providers: [
     StatusBar,
