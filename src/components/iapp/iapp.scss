@@ -1,0 +1,22 @@
+iapp {
+    .app {
+        margin: 5px;
+        width: 100px;
+        height: 100px;
+        .app-icon {
+            background-color: #f3f3f3;
+            border-radius: 20px;
+            box-shadow: 2px 2px 1px #bebebe;
+            width: 70px;
+            height: 70px;
+            margin: auto;
+        }
+        .app-desc {
+            font-size: 10px;
+            text-align: center;
+            font-weight: bold;
+            padding: 4px;
+            color: #555271;
+        }
+    }
+}
