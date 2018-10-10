@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { AppProvider } from '../../providers/app/app';
 import { IApp } from '../../domain/entity';
 import { Subject } from "rxjs";
@@ -18,13 +18,15 @@ import { Subject } from "rxjs";
 export class OftenAppPage implements OnDestroy {
 
   appList: IApp[];
+  canDeleteHistory: boolean = false;
 
   private destory$: Subject<any> = new Subject<any>();
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public appProvider: AppProvider) {
+    public appProvider: AppProvider,
+    private actionSheetCtrl: ActionSheetController) {
   }
 
   ionViewDidLoad() {
@@ -40,4 +42,20 @@ export class OftenAppPage implements OnDestroy {
     this.destory$.next();
   }
 
+  toggleSwitch(): void {
+    this.canDeleteHistory = !this.canDeleteHistory;
+  }
+
+  openMenu(app: IApp): void {
+    this.actionSheetCtrl.create({
+      buttons: [
+        {
+          text: '清除历史',
+          handler: () => {
+            console.log(`${app.appName}清除历史`);
+          }
+        }
+      ]
+    }).present();
+  }
 }

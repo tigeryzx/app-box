@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { IApp } from '../../domain/entity';
 
 /**
@@ -15,6 +15,13 @@ export class IappComponent {
 
   @Input()
   app: IApp;
+  @Input()
+  showDeleteBtn: boolean = false;
+  @Input()
+  showAnimate: boolean = false;
+
+  @Output()
+  onDelete: EventEmitter<IApp> = new EventEmitter<IApp>();
 
   constructor() {
 
@@ -24,4 +31,7 @@ export class IappComponent {
     console.log(`打开应用:${this.app.appName}`);
   }
 
+  delete(): void {
+    this.onDelete.next(this.app);
+  }
 }

@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-    <div class="app-content" *ngIf="appList">
-        <iapp (press)="openMenu(app)" *ngFor="let app of appList" [app]="app"></iapp>
-      </div>
+  <div class="app-content" *ngIf="appList">
+    <iapp (press)="toggleSwitch()" [showDeleteBtn]="canDeleteHistory" [showAnimate]="canDeleteHistory" *ngFor="let app of appList" [app]="app"></iapp>
+  </div>
 </ion-content>

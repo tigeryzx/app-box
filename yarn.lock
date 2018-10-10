@@ -72,6 +72,10 @@
   version "4.15.0"
   resolved "https://registry.yarnpkg.com/@ionic-native/core/-/core-4.15.0.tgz#4142bf76480607fc82fcdc2e3f0eae07bd63f5fb"
 
+"@ionic-native/file-transfer@^4.15.0":
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/file-transfer/-/file-transfer-4.15.0.tgz#1ec114205f1863fac48fdac1f8cc96d35afc5dbd"
+
 "@ionic-native/splash-screen@~4.15.0":
   version "4.15.0"
   resolved "https://registry.yarnpkg.com/@ionic-native/splash-screen/-/splash-screen-4.15.0.tgz#72f9b477219ccefdcd843d79b448927eda666a37"
@@ -788,6 +792,10 @@ cookie@0.3.1:
 copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
+
+cordova-plugin-file-transfer@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-file-transfer/-/cordova-plugin-file-transfer-1.7.1.tgz#a75d8be2ebc3bb9b23c5b1bbd199214ec267586b"
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
