@@ -1,4 +1,4 @@
-<div *ngIf="app" class="app" (click)="openApp()">
+<div *ngIf="app" class="app" (tap)="openApp()">
   <div [ngClass]="{'shake-constant shake-rotate': showAnimate}">
     <div class="app-delete-warp" *ngIf="showDeleteBtn">
         <div class="app-delete">x</div>

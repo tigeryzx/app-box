@@ -866,6 +866,10 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
+csshake@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/csshake/-/csshake-1.5.3.tgz#5561f310c2c1e5a74a5f665b44294594b30b425a"
+
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"

@@ -1,6 +1,19 @@
 .app-content {
     display: flex;
     flex-wrap: wrap;
+    .closeDelete{
+        width: 50px;
+        height: 50px;
+        border-radius: 60%;
+        position: absolute;
+        bottom: 10px;
+        left: 43%;
+        background-color: #d8d5d5;
+        text-align: center;
+        color: #484847;
+        font-size: 40px;
+        box-shadow: 2px 2px 1px #bebebe;
+    }
 }
 
 @import '../../node_modules/csshake/scss/csshake.scss';

@@ -19,6 +19,7 @@ export class MyAppPage implements OnDestroy {
 
   appList: IApp[];
   isLogin: boolean = false;
+  canDeleteFav: boolean = false;
 
   private destory$: Subject<any> = new Subject<any>();
 
@@ -45,6 +46,10 @@ export class MyAppPage implements OnDestroy {
   onLogin(loginInfo: LoginRequest): void {
     console.log(`登录${loginInfo.loginName}-${loginInfo.password}`);
     this.isLogin = true;
+  }
+
+  toggleSwitch(): void {
+    this.canDeleteFav = !this.canDeleteFav;
   }
 
   openMenu(app: IApp): void {
