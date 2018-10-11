@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AllAppPage } from '../pages/all-app/all-app';
 import { AppInfoPage } from '../pages/app-info/app-info';
 import { OftenAppPage } from '../pages/often-app/often-app';
+import { AppViewPage } from '../pages/app-view/app-view';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OftenAppPage } from '../pages/often-app/often-app';
     MyAppPage,
     AllAppPage,
     AppInfoPage,
-    OftenAppPage
+    OftenAppPage,
+    AppViewPage
   ],
   imports: [
     BrowserModule,
@@ -37,13 +39,14 @@ import { OftenAppPage } from '../pages/often-app/often-app';
     MyAppPage,
     AllAppPage,
     AppInfoPage,
-    OftenAppPage
+    OftenAppPage,
+    AppViewPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     AppProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }
