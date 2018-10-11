@@ -28,29 +28,29 @@ export class AppProvider {
     if (this.appList.length <= 0) {
       let app = new IApp();
       app.id = 1;
-      app.appName = "一号APP";
-      app.url = "https://www.baidu.com/";
-      app.appIconUrl = "../../assets/icon/i1.png";
+      app.appName = "分享小站";
+      app.url = "http://video.tiger.cn/";
+      app.appIconUrl = "../../assets/icon/i4.png";
       this.appList.push(app);
 
       app = new IApp();
       app.id = 2;
       app.appName = "二号APP";
-      app.url = "https://www.baidu.com/";
-      app.appIconUrl = "../../assets/icon/i2.png";
+      app.url = "http://www.baidu.com/";
+      app.appIconUrl = "../../assets/icon/i1.png";
       this.appList.push(app);
 
       app = new IApp();
       app.id = 3;
       app.appName = "三号APP";
-      app.url = "https://www.baidu.com/";
+      app.url = "http://www.baidu.com/";
       app.appIconUrl = "../../assets/icon/i3.png";
       this.appList.push(app);
 
       app = new IApp();
       app.id = 4;
       app.appName = "四号APP";
-      app.url = "https://www.baidu.com/";
+      app.url = "http://www.baidu.com/";
       app.appIconUrl = "../../assets/icon/i2.png";
       this.appList.push(app);
     }

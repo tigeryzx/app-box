@@ -1,7 +1,7 @@
 iapp {
     .app {
         margin: 5px;
-        width: 100px;
+        width: 85px;
         height: 100px;
         position: relative;
         .app-icon {
@@ -11,6 +11,10 @@ iapp {
             width: 70px;
             height: 70px;
             margin: auto;
+            border: 1px solid #e8e7e7;
+            img{
+                border-radius:20px;
+            }
         }
         .app-font-icon {
             text-align: center;
@@ -18,7 +22,7 @@ iapp {
             color: #cecece;
         }
         .app-desc {
-            font-size: 10px;
+            font-size: 14px;
             text-align: center;
             font-weight: bold;
             padding: 4px;
