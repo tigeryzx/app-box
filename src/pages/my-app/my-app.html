@@ -16,7 +16,7 @@
 <ion-content padding>
   <login *ngIf="!isLogin" (onLogin)="onLogin($event)"></login>
   <div class="app-content" *ngIf="isLogin && appList">
-    <iapp (press)="toggleSwitch()" [showDeleteBtn]="canDeleteFav" [showAnimate]="canDeleteFav" *ngFor="let app of appList" [app]="app"></iapp>
+    <iapp (press)="toggleSwitch()" (onDelete)="deleteFavApp(app)" [showDeleteBtn]="canDeleteFav" [showAnimate]="canDeleteFav" *ngFor="let app of appList" [app]="app"></iapp>
     <div class="closeDelete" *ngIf="canDeleteFav" (click)="toggleSwitch()">
       <ion-icon name="close"></ion-icon>
     </div>

@@ -54,19 +54,23 @@ export class AllAppPage implements OnDestroy {
       buttons: [{
         text: '收藏',
         handler: () => {
+          this.appProvider.addToFav(app);
           console.log(`收藏${app.appName}`);
         }
-      },{
+      }, {
         text: '编辑',
         handler: () => {
-          const modal = this.modalCtrl.create(AppInfoPage);
+          const modal = this.modalCtrl.create(AppInfoPage, {
+            app
+          });
           modal.present();
           console.log(`编辑${app.appName}`);
         }
-      },{
+      }, {
         text: '删除',
         role: 'destructive',
         handler: () => {
+          this.appProvider.deleteApp(app.id);
           console.log(`删除${app.appName}`);
         }
       }]

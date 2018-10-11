@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <div class="app-content" *ngIf="appList">
-    <iapp (press)="toggleSwitch()" [showDeleteBtn]="canDeleteHistory" [showAnimate]="canDeleteHistory" *ngFor="let app of appList" [app]="app"></iapp>
+    <iapp (press)="toggleSwitch()" (onDelete)="deleteOftenApp(app)" [showDeleteBtn]="canDeleteHistory" [showAnimate]="canDeleteHistory" *ngFor="let app of appList" [app]="app"></iapp>
     <div class="closeDelete" *ngIf="canDeleteHistory" (click)="toggleSwitch()">
       <ion-icon name="close"></ion-icon>
     </div>

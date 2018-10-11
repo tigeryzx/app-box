@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { AppProvider } from '../../providers/app/app';
 import { IApp, LoginRequest } from '../../domain/entity';
 import { Subject } from 'rxjs/Subject';
@@ -26,8 +26,7 @@ export class MyAppPage implements OnDestroy {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private appProvider: AppProvider,
-    private actionSheetCtrl: ActionSheetController) {
+    private appProvider: AppProvider) {
   }
 
   ionViewDidLoad() {
@@ -52,16 +51,7 @@ export class MyAppPage implements OnDestroy {
     this.canDeleteFav = !this.canDeleteFav;
   }
 
-  openMenu(app: IApp): void {
-    this.actionSheetCtrl.create({
-      buttons: [
-        {
-          text: '取消收藏',
-          handler: () => {
-            console.log(`${app.appName}取消收藏`);
-          }
-        }
-      ]
-    }).present();
+  deleteFavApp(app: IApp): void {
+    this.appProvider.deleteToFav(app.id);
   }
 }

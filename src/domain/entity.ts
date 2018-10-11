@@ -1,8 +1,10 @@
 export class IApp {
     constructor() {
     }
+    id: number;
     appName: string;
     appIconUrl: string;
+    appIconFont: string;
     backgroundColor: string;
     url: string;
 }

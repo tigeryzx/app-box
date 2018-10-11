@@ -1,10 +1,13 @@
 <div *ngIf="app" class="app" (tap)="openApp()">
   <div [ngClass]="{'shake-constant shake-rotate': showAnimate}">
-    <div class="app-delete-warp" *ngIf="showDeleteBtn">
-        <div class="app-delete">x</div>
+    <div class="app-delete-warp" *ngIf="showDeleteBtn" (click)="delete()">
+      <div class="app-delete">x</div>
     </div>
     <div class="app-icon">
-      <img [src]="app.appIconUrl">
+      <img *ngIf="app.appIconUrl" [src]="app.appIconUrl">
+      <div *ngIf="app.appIconFont && !app.appIconUrl" class="app-font-icon" >
+        {{app.appIconFont}}
+      </div>
     </div>
     <div class="app-desc">
       {{app.appName}}

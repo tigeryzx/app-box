@@ -1,5 +1,6 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { IApp } from '../../domain/entity';
+import { AppProvider } from '../../providers/app/app';
 
 /**
  * Generated class for the IappComponent component.
@@ -23,12 +24,17 @@ export class IappComponent {
   @Output()
   onDelete: EventEmitter<IApp> = new EventEmitter<IApp>();
 
-  constructor() {
+  constructor(
+    private appProvider: AppProvider
+  ) {
 
   }
 
   openApp(): void {
-    console.log(`打开应用:${this.app.appName}`);
+    if (!this.showDeleteBtn && this.app.url) {
+      this.appProvider.addToOften(this.app);
+      window.location.href = this.app.url;
+    }
   }
 
   delete(): void {

@@ -46,6 +46,10 @@ export class OftenAppPage implements OnDestroy {
     this.canDeleteHistory = !this.canDeleteHistory;
   }
 
+  deleteOftenApp(app: IApp): void {
+    this.appProvider.deleteToOften(app.id);
+  }
+
   openMenu(app: IApp): void {
     this.actionSheetCtrl.create({
       buttons: [
