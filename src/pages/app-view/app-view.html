@@ -6,14 +6,26 @@
 -->
 <ion-content>
   <iframe style="width:100%;height:100%;border:0;" [src]="safeUrl"></iframe>
-  <div class="dock">
+</ion-content>
+<ion-footer>
+  <div class="dock hidden" *ngIf="!isShowDock">
+    <div class="btn-bar">
+      <button (click)="toggleDock()" class="close-btn" ion-button icon-only outline>
+        <ion-icon name="arrow-up"></ion-icon>
+      </button>
+    </div>
+  </div>
+  <div class="dock" *ngIf="isShowDock">
     <div class="dock-min-icon">
       <img [src]="app.appIconUrl"><span>{{app.appName}}</span>
     </div>
     <div class="btn-bar">
       <button (click)="backToHome()" class="close-btn" ion-button icon-only outline>
-        <ion-icon name="close"></ion-icon>
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+      <button (click)="toggleDock()" class="close-btn" ion-button icon-only outline>
+        <ion-icon name="arrow-down"></ion-icon>
       </button>
     </div>
   </div>
-</ion-content>
+</ion-footer>

@@ -18,6 +18,7 @@ export class AppViewPage {
 
   safeUrl: SafeResourceUrl;
   app: IApp;
+  isShowDock: boolean = true;
 
   constructor(
     public navCtrl: NavController,
@@ -33,5 +34,9 @@ export class AppViewPage {
 
   backToHome(): void {
     this.navCtrl.pop();
+  }
+
+  toggleDock(): void {
+    this.isShowDock = !this.isShowDock;
   }
 }

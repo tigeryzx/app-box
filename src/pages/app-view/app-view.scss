@@ -1,30 +1,35 @@
 page-app-view {
-    .dock{
-        position: fixed;
+    .dock {
+        position: absolute;
         bottom: 0;
         width: 100%;
         height: 30px;
         background-color: #d2d2d2;
-        -webkit-transform: translateZ(0); 
-        .dock-min-icon{
+        transform: translateZ(0);
+        opacity: 0.8;
+        -webkit-transform: translateZ(0);
+        .dock-min-icon {
             display: flex;
             line-height: 35px;
-            img{
+            img {
                 height: 25px;
                 width: 25px;
                 margin: 3px;
             }
         }
-        .btn-bar{
+        .btn-bar {
             position: absolute;
             top: 0;
             right: 0;
-            .close-btn{
+            .close-btn {
                 height: 25px;
                 width: 25px;
                 margin: 3px;
             }
         }
+    }
 
+    .dock.hidden {
+        background: transparent;
     }
 }
